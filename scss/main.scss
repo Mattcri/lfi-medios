@@ -1,0 +1,9 @@
+// Base styles
+@import "base/fonts";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/general";
+
+// Layout Sections
+@import "layout/header-nav";
+@import "layout/hero";

@@ -1,0 +1,149 @@
+header {
+  padding: 1.5rem 0;
+  width: 100%;
+  background-color: $color-primary;
+  .nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      img {
+        width: 58px;
+        vertical-align: middle;
+        @include view-min(1080px) {
+          width: 75px;
+        }
+      }
+    }
+  }
+
+}
+
+.navigation {
+  display: none;
+  @include view-min(1080px) {
+    display: block;
+  }
+
+  &__wrap-list {
+    padding: 0;
+    @include view-min(1080px) {
+      display: flex;
+      margin: 1.1rem 0;
+      &--contact {
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+    padding-bottom: 2rem;
+    @include view-min(1080px) {
+      padding: 0;
+      text-align: initial;
+      margin: 0 0 0 1.5rem;
+    }
+  }
+  &__item {
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    font-family: $font-black;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      right: 0px;
+      height: 2.5px;
+      background: $bg-4;
+      transform: scaleX(0);
+      transition: transform 450ms ease-in-out;
+    }
+    &:hover::after {
+      transform: scale(1);
+    }
+    &--contact {
+      color: $bg-btn;
+    }
+  }
+  
+}
+
+.mb-menu {
+  width: 40px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 1s ease-in-out;
+  @include view-min(1080px) {
+    display: none;
+  }
+  &__hamburger {
+      width: 80%;
+      height: 5px;
+      background-color: $bg-btn;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 5px;
+        background-color: $bg-btn;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+      }
+      &::before {
+        transform: translateY(-10px);
+      }
+      &::after {
+        transform: translateY(10px);
+      }
+    }
+
+    &.activo &__hamburger {
+      transform: translateX(-20px);
+      background: transparent;
+      transition: all .5s ease-in-out;
+    }
+    &.activo &__hamburger::before {
+      transform: rotate(45deg) translate(17px, -17px);
+    }
+    &.activo &__hamburger::after {
+      transform: rotate(-45deg) translate(17px, 17px);
+    }
+
+    &.activo ~ .navigation {
+      align-items: center;
+      background-color: $color-primary;
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 80px );
+      justify-content: center;
+      position: absolute;
+      top: 87px;
+      transition: all 2s ease-in;
+      right: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    &.activo ~ .navigation .navigation__wrap-list {
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-15vh);
+      transition: all 1s ease-in;
+    }
+
+}
