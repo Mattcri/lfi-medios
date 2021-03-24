@@ -1,0 +1,38 @@
+@import "../abstracts/variables";
+
+@mixin btn-base {
+  background-color: $bg-btn;
+  border: none;
+  color: $color-fonts-2;
+  font-size: 1.2rem;
+  font-family: $font-b;
+  padding: 1.5rem 3.3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  min-height: 4rem;
+  .btn__content {
+    display: inline-flex;
+    transform: translateY(2px);
+    position: relative;
+    p {
+      margin: 0;
+    }
+    img {
+      transform: translateY(-1px);
+      margin-left: 5px;
+      width: 20px;
+      
+    }
+  }
+  &:hover {
+    background-color: lighten($bg-btn, 10%);
+    .btn__content {
+      img {
+        transition: all .2s ease;
+        width: 25px;
+        
+      }
+    }
+  }
+  
+}

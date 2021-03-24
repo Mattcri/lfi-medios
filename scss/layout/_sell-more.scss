@@ -1,0 +1,17 @@
+.sell-more {
+  background-color: $bg-4;
+  padding: 4rem 0;
+  &__content {
+    text-align: center;
+    h3 {
+      color: $color-primary;
+      font-family: $font-b;
+      font-size: 4rem;
+      margin: 0 0 1.5rem 0;
+      @include view-min(576px) {
+        font-size: 4.8rem;
+      }
+    }
+  }
+
+}

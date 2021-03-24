@@ -1,3 +1,5 @@
+@import "../components/buttons";
+
 html {
   font-size: $basefontsize;
 }
@@ -8,8 +10,11 @@ body {
   width: 100%;
   max-width: 100%;
   font-family: $font-r;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   -webkit-font-smoothing: antialiased;
+  @include view-min(992px) {
+    font-size: 2rem;
+  }
 }
 
 body,html {
@@ -25,6 +30,7 @@ p {
   margin-top: 0;
   b{
     font-weight: bold;
+    font-family: $font-black;
   }
   a {
     text-decoration: underline;
@@ -60,4 +66,39 @@ figure {
 
 a {
   text-decoration: none;
+}
+
+.title-1 {
+  color: $color-font-dark;
+  font-family: $font-b;
+  font-size: 2.5rem;
+  margin-top: 0;
+  letter-spacing: 4px;
+  line-height: 1.5;
+  @include view-min(576px) {
+    margin-top: 2rem;
+  }
+}
+
+.title-2 {
+  color: $color-primary;
+  font-family: $font-black;
+  font-size: 3.5rem;
+  margin-top: 2rem;
+  &--mb0 {
+    margin-bottom: 0;
+  }
+}
+
+.btn {
+  @include btn-base;
+  &--purple {
+    background-color: $color-primary;
+    &:hover {
+      background-color: lighten($color-primary, 10%);
+    }
+    .btn__content p {
+      color: #fff;
+    }
+  }
 }

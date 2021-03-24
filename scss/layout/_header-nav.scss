@@ -55,6 +55,9 @@ header {
     text-transform: uppercase;
     font-family: $font-black;
     position: relative;
+    @include view-min(1080px) {
+      font-size: 1.7rem;
+    }
     &::after {
       content: "";
       position: absolute;

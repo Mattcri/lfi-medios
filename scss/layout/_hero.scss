@@ -3,19 +3,22 @@
   height: calc(100vh - 80px);
   min-width: 320px;
   @include view-max(550px) {
-    height: calc(95vh - 80px);
+    height: calc(95vh - 88px);
   }
   .row.wrap {
     height: 100%;
     width: 100%;
     position: relative;
-    @include view-min(992px) {
+    @include view-min(768px) {
       display: flex;
       align-items: center;
     }
   }
   &__txt-banner {
     margin-top: 4rem;
+    @include view-min(768px) {
+      margin-top: -20rem;
+    }
     @include view-min(992px) {
       margin: 0;
     }
@@ -30,30 +33,50 @@
 
   &__icon {
     position: absolute;
-    bottom: 8%;
     right: 0;
     padding: 0 15px;
     text-align: center;
+    @include view-max(576px) {
+      top: 50%;
+      transform: translateY(-40%);
+    }
     @include view-min(576px) {
       text-align: end;
+      bottom: 8%;
+    }
+    @include view-min(992px) {
       bottom: 25px;
     }
     img {
       width: 92%;
       @include view-min(500px) {
-        width: 70%;
+        width: 80%;
+      }
+      @include view-min(600px) {
+        width: 75%;
       }
       @include view-min(1130px) {
-        width: 90%;
+        width: 88%;
+      }
+      @include view-min(1250px) {
+        width: 94%;
       }
     }
   }
 
   &__arrow {
-    position: absolute;
-    padding: 0 15px;
-    // left: 25px;
-    top: 60%;
+    display: none;
+    @include view-min(576px) {
+      display: block;
+      position: absolute;
+      padding: 0 15px;
+      top: 50%;
+      left: 10%;
+    }
+    @include view-min(992px) {
+      top: 60%;
+      left: initial;
+    }
   }
 
 }
