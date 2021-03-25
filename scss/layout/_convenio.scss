@@ -1,0 +1,37 @@
+.convenio {
+  @extend .about;
+  background-color: $bg-3;
+
+  &__wrap-img {
+    margin: 5rem 0 3rem;
+    @include view-min(576px) {
+      margin: 8.5rem 0 0;
+    }
+    img {
+      width: 80%;
+      object-fit: contain;
+      @include view-min(992px) {
+        width: 60%;
+      }
+    }
+  }
+
+  &__data-title {
+    text-align: center;
+    @include view-min(576px) {
+      text-align: initial;
+    }
+  }
+
+  &__data-comuni {
+    @include view-min(576px) {
+      margin: 7rem 0 0;
+    }
+  }
+  &__data-dev {
+    @include view-min(576px) {
+      margin: 4rem 0 0;
+    }
+  }
+
+}

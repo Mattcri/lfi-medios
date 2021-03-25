@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
   <g id="Grupo_3513" data-name="Grupo 3513" transform="translate(0 0)">
-    <g id="Elipse_421" data-name="Elipse 421" transform="translate(0 0)" fill="none" stroke="#fff" stroke-width="1.5">
+    <g id="Elipse_421" data-name="Elipse 421" transform="translate(0 0)" fill="none" stroke="#E8E34A" stroke-width="1.5">
       <circle cx="17" cy="17" r="17" stroke="none"/>
       <circle cx="17" cy="17" r="16.25" fill="none"/>
     </g>
     <g id="Grupo_736" data-name="Grupo 736" transform="translate(12.74 10.315)">
-      <path id="f" d="M4.949,14.681V7.993H7.2l.338-2.618H4.949V3.707c0-.758.209-1.271,1.294-1.271H7.616V.1A18.691,18.691,0,0,0,5.6,0,3.142,3.142,0,0,0,2.243,3.449V5.375H0V7.993H2.246v6.688Z" transform="translate(0 0)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      <path id="f" d="M4.949,14.681V7.993H7.2l.338-2.618H4.949V3.707c0-.758.209-1.271,1.294-1.271H7.616V.1A18.691,18.691,0,0,0,5.6,0,3.142,3.142,0,0,0,2.243,3.449V5.375H0V7.993H2.246v6.688Z" transform="translate(0 0)" fill="#E8E34A" stroke="#E8E34A" stroke-width="1"/>
     </g>
   </g>
 </svg>

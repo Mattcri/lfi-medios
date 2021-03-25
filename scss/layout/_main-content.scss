@@ -8,8 +8,7 @@
   padding: 8rem 0;
   @include view-min(576px) {
     min-height: calc(100vh - 200px);
-    // padding: 4rem 0;
-    // padding: 0;
+    
   }
   @include view-min(992px) {
     min-height: calc(100vh - 80px);
@@ -25,7 +24,6 @@
 }
 
 .team {
-  // min-height: 100vh;
   @extend .about;
   background-color: #fff;
   &__txt {
@@ -80,7 +78,7 @@
   &__icon {
     transform: translateX(-50px);
     @include view-min(992px) {
-      transform: translateX(-90px);
+      transform: translate(-90px, 25px);
 
     }
   }
@@ -111,7 +109,7 @@
       letter-spacing: -1px;
       margin: 0;
       @include view-min(576px) {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
       }
       
     }

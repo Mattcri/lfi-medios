@@ -22,6 +22,10 @@ header {
 
 .navigation {
   display: none;
+  @include view-max(1079px) {
+    transform: translateX(100%);
+    transition: transform 2s ease;
+  }
   @include view-min(1080px) {
     display: block;
   }
@@ -137,6 +141,7 @@ header {
       position: absolute;
       top: 87px;
       transition: all 2s ease-in;
+      transform: translateX(0);
       right: 0;
       width: 100%;
       z-index: 10;
@@ -149,4 +154,20 @@ header {
       transition: all 1s ease-in;
     }
 
+}
+
+
+@keyframes fadeMenu {
+  0% {
+    transform: translateX(100%);
+  }
+  33% {
+    transform: translateX(70%);
+  }
+  66% {
+    transform: translateX(35%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

@@ -1,0 +1,49 @@
+.partners {
+  padding: 7rem 0;
+  background-color: $color-fonts;
+  color: #fff;
+  @include view-min(992px) {
+    align-items: center;
+    display: flex;
+    min-height: 50vh;
+    padding: 5rem 0;
+
+  }
+  &__wrap-plataformas {
+    @include view-min(576px) {
+      margin: 0 10px;
+    }
+  }
+  &__plataformas {
+    display: flex;
+    flex-direction: column;
+    &--center {
+      @include view-max(768px) {
+        align-items: center;
+        margin-top: 2rem;
+      }
+    }
+    
+  }
+  &__item {
+    display: inline-flex;
+    padding-bottom: 1rem;
+    &--mob-none {
+      @include view-max(768px) {
+        display: none;
+      }
+    }
+    &--desk-none {
+      @include view-min(769px) {
+        display: none;
+      }
+    }
+    img {
+      width: 20px;
+      height: 18px;
+    }
+    p {
+      margin: 0 0 0 1rem;
+    }
+  }
+}

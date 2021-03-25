@@ -10,6 +10,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   min-height: 4rem;
+  position: relative;
   .btn__content {
     display: inline-flex;
     transform: translateY(2px);
@@ -29,7 +30,7 @@
     .btn__content {
       img {
         transition: all .2s ease;
-        width: 25px;
+        transform: translate(5px, -1px);
         
       }
     }
