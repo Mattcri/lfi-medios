@@ -2,6 +2,7 @@
   background-color: $color-primary;
   height: calc(100vh - 80px);
   min-width: 320px;
+  // margin: 8vh 0 0 0;
   @include view-max(550px) {
     height: calc(95vh - 88px);
   }
