@@ -106,3 +106,9 @@ box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.5);
     @content;
   }
 }
+
+@mixin view-height ($height) {
+  @media only screen and (min-height: $height) {
+    @content;
+  }
+}

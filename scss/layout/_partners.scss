@@ -11,7 +11,7 @@
   }
   &__wrap-plataformas {
     @include view-min(576px) {
-      margin: 0 10px;
+      margin: 0;
     }
   }
   &__plataformas {

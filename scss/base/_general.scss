@@ -68,7 +68,13 @@ figure {
   // }
 }
 
-
+.wrap-carrusel {
+  padding: 0 15px;
+  @include view-min(992px) {
+    width: 97%;
+    margin: 0 auto;
+  }
+}
 
 *, ::after, ::before {
     box-sizing: border-box;
@@ -101,9 +107,9 @@ a {
   color: $color-primary;
   font-family: $font-black;
   font-size: 3.5rem;
-  margin-top: 2rem;
+  margin: 2rem 0 1.5rem;
   &--mb0 {
-    margin-bottom: 0;
+    margin-bottom: 3rem;
   }
   &--footer {
     color: $color-fonts;

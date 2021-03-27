@@ -12,10 +12,10 @@ header {
     align-items: center;
     &__logo {
       img {
-        width: 58px;
+        width: 70px;
         vertical-align: middle;
         @include view-min(1080px) {
-          width: 75px;
+          width: 107px;
         }
       }
     }
@@ -55,18 +55,18 @@ header {
   &__item {
     color: #fff;
     display: block;
-    text-transform: uppercase;
-    font-family: $font-black;
+    text-transform: capitalize;
+    // font-family: $font-black;
     position: relative;
     @include view-min(1080px) {
-      font-size: 1.65rem;
+      font-size: 1.8rem;
     }
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      left: 30%;
-      right: 0px;
+      left: 8%;
+      right: 8%;
       height: 2.5px;
       background: $bg-4;
       transform: scaleX(0);
