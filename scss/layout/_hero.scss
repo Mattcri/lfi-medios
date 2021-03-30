@@ -2,7 +2,10 @@
   background-color: $color-primary;
   height: calc(100vh - 80px);
   min-width: 320px;
-  // margin: 8vh 0 0 0;
+  // margin: 100px 0 0 0;
+  // @include view-min(1080px) {
+  //   margin: 137px 0 0 0;
+  // }
   @include view-max(550px) {
     height: calc(95vh - 88px);
   }
@@ -17,14 +20,29 @@
   }
   &__txt-banner {
     margin-top: 2rem;
+    animation: show cubic-bezier(.77,0,.175,1) 1.5s;
     h1 {
+      // color: transparent;
       color: #fff;
       font-family: $font-black;
       font-size: 6rem;
       text-transform: uppercase;
+      // position: relative;
+      // -webkit-text-stroke: 2px $bg-btn;
       @include view-max(576px) {
         font-size: 3.5rem;
       }
+      // &::before {
+      //   content: attr(data-text);
+      //   position: absolute;
+      //   height: 100%;
+      //   color: #fff;
+      //   top: 0;
+      //   left: 0;
+      //   right: 0;
+      //   width: 100%;
+      //   -webkit-text-stroke: 0px $color-primary;
+      // }
       span {
         -webkit-text-stroke: 2px $bg-btn;
         color: transparent;
@@ -66,7 +84,7 @@
         width: 80%;
       }
       @include view-min(600px) {
-        width: 75%;
+        width: 62%;
       }
       @include view-min(1130px) {
         width: 88%;
@@ -75,7 +93,7 @@
         width: 94%;
       }
       @include view-height(880px) {
-        width: 800px;
+        width: 790px;
       }
       @include view-height(990px) {
         width: 600px;
@@ -98,4 +116,21 @@
     }
   }
 
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(-50px);
+    opacity: .2;
+  }
+  30% {
+    opacity: .4;
+  }
+  50% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+  90%, 100% {
+    transform: translateY(0);
+  }
 }

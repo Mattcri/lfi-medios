@@ -1,5 +1,7 @@
 const mobileMenu = document.querySelector('.mb-menu');
 const navItem = document.getElementsByClassName('navigation__item');
+const aboutTitle = document.querySelector('.about--title');
+
 
 for (i = 0; i < navItem.length; i++) {
   navItem[i].addEventListener('click', function () {
@@ -11,35 +13,21 @@ mobileMenu.addEventListener('click', () => {
   mobileMenu.classList.toggle('activo')
 });
 
-new WOW().init();
 
-if ($('.carrusel-5').length) {
-  [].forEach.call(document.querySelectorAll('.carrusel-5'), function (el) {
-    tns({
-      container: el,
-      items: 5,
-      slideBy: 1,
-      gutter: 15,
-      controls: true,
-      nav: false,
-      navPosition: 'bottom',
-      responsive: {
-        0: {
-          items: 1
-        },
-        480: {
-          items: 2
-        },
-        640: {
-          items: 3
-        },
-        767: {
-          items: 4
-        },
-        900: {
-          items: 5
-        }
-      }
-    });
-  });
-}
+window.addEventListener('scroll', () => {
+  let scrolled = window.scrollY;
+
+  switch (true) {
+    case scrolled >= 1300:
+      aboutTitle.classList.remove('fixed');
+      break;
+    case scrolled >= 900:
+      aboutTitle.classList.add('fixed');
+      break;
+    
+    default:
+      aboutTitle.classList.remove('fixed');
+  }
+  
+})
+

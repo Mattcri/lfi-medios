@@ -89,21 +89,34 @@
     }
   }
   &__logo {
-    margin-right: 35px;
+    // margin-right: 25px;
+    &--1 {
+      margin-right: 30px;
+    }
+    &--3 {
+      transform: translate(0, 20px);
+      @include view-min(678px) {
+        transform: translate(-15, 20px);
+      }
+      @include view-min(992px) {
+        transform: translate(-15px, 15px);
+
+      }
+    }
   }
   &--lfi-logo {
     width: 110px;
   }
-  &--sitefinity {
-    transform: translate(0, 20px);
-    @include view-min(678px) {
-      transform: translate(-35px, 20px);
-    }
-    @include view-min(992px) {
-      transform: translate(-35px, 15px);
+  // &--sitefinity {
+  //   transform: translate(0, 20px);
+  //   @include view-min(678px) {
+  //     transform: translate(-35px, 20px);
+  //   }
+  //   @include view-min(992px) {
+  //     transform: translate(-35px, 15px);
 
-    }
-  }
+  //   }
+  // }
 
 }
 

@@ -5,10 +5,15 @@
   align-items: center;
   @include view-min(576px) {
     min-height: calc(100vh - 200px);
-    
   }
   @include view-min(992px) {
     min-height: calc(100vh - 80px);
+  }
+
+  &__content {
+    p {
+      line-height: 28px;
+    }
   }
 
   &__title-icon {
@@ -20,11 +25,11 @@
       text-align: start;
     }
     img {
-      width: 80%;
+      width: 85%;
       object-fit: contain;
       transform: translate(0, -15px);
       @include view-min(992px) {
-        width: 70%;
+        width: 80%;
         transform: translate(-50px, -25px);
       }
     }

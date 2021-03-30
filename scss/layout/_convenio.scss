@@ -16,6 +16,11 @@
     }
   }
 
+  &--title {
+     animation: typing 5s steps(14) infinite;
+      overflow: hidden;
+  }
+
   &__data-title {
     text-align: center;
     @include view-min(576px) {

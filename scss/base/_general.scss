@@ -86,26 +86,53 @@ a {
 
 .title-1 {
   color: $color-font-dark;
+  // color: transparent;
   font-family: $font-b;
   font-size: 2.5rem;
   margin-top: 0;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   line-height: 1.5;
+  position: relative;
+  // opacity: 0;
   @include view-min(576px) {
     margin-top: 2rem;
   }
   &--white {
     color: #fff;
     margin: 0 0 2.5rem 0;
-    // margin-top: 0;
+  }
+  &.about--title {
+    animation: typing 5s steps(12) infinite;
+    overflow: hidden;
+  }
+  &.services--title {
+    animation: typing 5s steps(9) infinite;
+    overflow: hidden;
+  }
+  &.performance--title {
+     animation: typing 5s steps(14) infinite;
+      overflow: hidden;
   }
   
 }
 
+@keyframes typing {
+  0%, 90%, 100% {
+    width: 0;
+  }
+  30% {
+    width: 50%;
+  }
+  50%, 70% {
+    width: 100%;
+  }
+}
+
 .title-2 {
   color: $color-primary;
-  font-family: $font-black;
+  // font-family: $font-black;
+  font-weight: bolder;
   font-size: 3.5rem;
   margin: 2rem 0 1.5rem;
   &--mb0 {
@@ -135,9 +162,15 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background: $color-font-dark;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
   background: lighten($color-fonts-2, 10%);
+}
+
+.pl-lg-7{
+  @include view-min(992px) {
+    padding-left: 7rem;
+  }
 }

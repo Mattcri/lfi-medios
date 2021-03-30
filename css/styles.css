@@ -109,8 +109,9 @@ a {
   font-size: 2.5rem;
   margin-top: 0;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   line-height: 1.5;
+  position: relative;
 }
 @media only screen and (min-width: 576px) {
   .title-1 {
@@ -121,10 +122,33 @@ a {
   color: #fff;
   margin: 0 0 2.5rem 0;
 }
+.title-1.about--title {
+  animation: typing 5s steps(12) infinite;
+  overflow: hidden;
+}
+.title-1.services--title {
+  animation: typing 5s steps(9) infinite;
+  overflow: hidden;
+}
+.title-1.performance--title {
+  animation: typing 5s steps(14) infinite;
+  overflow: hidden;
+}
 
+@keyframes typing {
+  0%, 90%, 100% {
+    width: 0;
+  }
+  30% {
+    width: 50%;
+  }
+  50%, 70% {
+    width: 100%;
+  }
+}
 .title-2 {
   color: #6E39B7;
-  font-family: "bogle-black", sans-serif;
+  font-weight: bolder;
   font-size: 3.5rem;
   margin: 2rem 0 1.5rem;
 }
@@ -183,11 +207,17 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background: #112342;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
   background: #284b85;
+}
+
+@media only screen and (min-width: 992px) {
+  .pl-lg-7 {
+    padding-left: 7rem;
+  }
 }
 
 header {
@@ -323,6 +353,7 @@ header .nav__logo img {
   transform: rotate(-45deg) translate(17px, 17px);
 }
 .mb-menu.activo ~ .navigation {
+  animation: showMobileMenu cubic-bezier(0.77, 0, 0.175, 1) 1s;
   align-items: center;
   background-color: #6E39B7;
   display: flex;
@@ -331,7 +362,6 @@ header .nav__logo img {
   justify-content: center;
   position: absolute;
   top: 87px;
-  transition: all 2s ease-in;
   right: 0;
   width: 100%;
   z-index: 10;
@@ -343,17 +373,15 @@ header .nav__logo img {
   transition: all 1s ease-in;
 }
 
-@keyframes fadeMenu {
+@keyframes showMobileMenu {
   0% {
     transform: translateX(100%);
+    opacity: 0.3;
   }
   33% {
-    transform: translateX(70%);
+    opacity: 0.5;
   }
-  66% {
-    transform: translateX(35%);
-  }
-  100% {
+  75%, 100% {
     transform: translateX(0);
   }
 }
@@ -380,6 +408,7 @@ header .nav__logo img {
 }
 .hero__txt-banner {
   margin-top: 2rem;
+  animation: show cubic-bezier(0.77, 0, 0.175, 1) 1.5s;
 }
 .hero__txt-banner h1 {
   color: #fff;
@@ -441,7 +470,7 @@ header .nav__logo img {
 }
 @media only screen and (min-width: 600px) {
   .hero__icon img {
-    width: 75%;
+    width: 62%;
   }
 }
 @media only screen and (min-width: 1130px) {
@@ -456,7 +485,7 @@ header .nav__logo img {
 }
 @media only screen and (min-height: 880px) {
   .hero__icon img {
-    width: 800px;
+    width: 790px;
   }
 }
 @media only screen and (min-height: 990px) {
@@ -483,6 +512,22 @@ header .nav__logo img {
   }
 }
 
+@keyframes show {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+  90%, 100% {
+    transform: translateY(0);
+  }
+}
 .about, .convenio, .team {
   background-color: #F7FDFE;
   min-height: 100vh;
@@ -500,6 +545,12 @@ header .nav__logo img {
     min-height: calc(100vh - 80px);
   }
 }
+@media only screen and (min-width: 768px) {
+  .about--title.fixed {
+    position: fixed;
+    top: 10vh;
+  }
+}
 .about__txt {
   margin-bottom: 3rem;
 }
@@ -507,6 +558,9 @@ header .nav__logo img {
   .about__txt {
     padding: 0 20rem 0 0;
   }
+}
+.about__txt p {
+  line-height: 28px;
 }
 
 .team {
@@ -531,8 +585,18 @@ header .nav__logo img {
   text-align: center;
 }
 .team__icon img {
-  width: 80%;
+  width: 85%;
   object-fit: contain;
+}
+@media only screen and (min-width: 600px) {
+  .team__icon img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .team__icon img {
+    width: 90%;
+  }
 }
 
 .services {
@@ -555,6 +619,9 @@ header .nav__logo img {
     padding-right: 20%;
   }
 }
+.services__content p {
+  line-height: 28px;
+}
 .services__title-icon {
   text-align: start;
 }
@@ -564,12 +631,12 @@ header .nav__logo img {
   }
 }
 .services__title-icon img {
-  width: 80%;
+  width: 78%;
   object-fit: contain;
 }
 @media only screen and (min-width: 992px) {
   .services__title-icon img {
-    width: 70%;
+    width: 80%;
   }
 }
 .services__icon {
@@ -577,7 +644,7 @@ header .nav__logo img {
 }
 @media only screen and (min-width: 992px) {
   .services__icon {
-    transform: translate(-90px, 25px);
+    transform: translate(-90px, 55px);
   }
 }
 
@@ -799,6 +866,9 @@ header .nav__logo img {
     min-height: calc(100vh - 80px);
   }
 }
+.performance__content p {
+  line-height: 28px;
+}
 .performance__title-icon {
   text-align: start;
 }
@@ -811,13 +881,13 @@ header .nav__logo img {
   }
 }
 .performance__icon img {
-  width: 80%;
+  width: 85%;
   object-fit: contain;
   transform: translate(0, -15px);
 }
 @media only screen and (min-width: 992px) {
   .performance__icon img {
-    width: 70%;
+    width: 80%;
     transform: translate(-50px, -25px);
   }
 }
@@ -868,6 +938,10 @@ header .nav__logo img {
   .convenio__wrap-img img {
     width: 60%;
   }
+}
+.convenio--title {
+  animation: typing 5s steps(14) infinite;
+  overflow: hidden;
 }
 .convenio__data-title {
   text-align: center;
@@ -984,24 +1058,24 @@ header .nav__logo img {
     justify-content: initial;
   }
 }
-.footer__logo {
-  margin-right: 35px;
+.footer__logo--1 {
+  margin-right: 30px;
 }
-.footer--lfi-logo {
-  width: 110px;
-}
-.footer--sitefinity {
+.footer__logo--3 {
   transform: translate(0, 20px);
 }
 @media only screen and (min-width: 678px) {
-  .footer--sitefinity {
-    transform: translate(-35px, 20px);
+  .footer__logo--3 {
+    transform: translate(-15, 20px);
   }
 }
 @media only screen and (min-width: 992px) {
-  .footer--sitefinity {
-    transform: translate(-35px, 15px);
+  .footer__logo--3 {
+    transform: translate(-15px, 15px);
   }
+}
+.footer--lfi-logo {
+  width: 110px;
 }
 
 .form {
