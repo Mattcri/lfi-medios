@@ -1,6 +1,6 @@
 const mobileMenu = document.querySelector('.mb-menu');
 const navItem = document.getElementsByClassName('navigation__item');
-const aboutTitle = document.querySelector('.about--title');
+// const aboutTitle = document.querySelector('.about--title');
 
 
 for (i = 0; i < navItem.length; i++) {
@@ -14,20 +14,20 @@ mobileMenu.addEventListener('click', () => {
 });
 
 
-window.addEventListener('scroll', () => {
-  let scrolled = window.scrollY;
+// window.addEventListener('scroll', () => {
+//   let scrolled = window.scrollY;
 
-  switch (true) {
-    case scrolled >= 1300:
-      aboutTitle.classList.remove('fixed');
-      break;
-    case scrolled >= 900:
-      aboutTitle.classList.add('fixed');
-      break;
+//   switch (true) {
+//     case scrolled >= 1200:
+//       aboutTitle.classList.remove('fixed');
+//       break;
+//     case scrolled >= 900:
+//       aboutTitle.classList.add('fixed');
+//       break;
     
-    default:
-      aboutTitle.classList.remove('fixed');
-  }
+//     default:
+//       aboutTitle.classList.remove('fixed');
+//   }
   
-})
+// })
 

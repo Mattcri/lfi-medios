@@ -63,18 +63,16 @@
           </li>
         </ul>
 
-        <!-- <ul class="navigation__wrap-list navigation__wrap-list--contact">
-          <li class="navigation__list navigation__list--contact">
-            <a href="#contacto" class="navigation__item navigation__item--contact">
-              Contáctanos
-            </a>
-          </li>
-        </ul> -->
-
       </nav>
 
     </div>
   </header>
+
+  <div class="rrss-fixed">
+    <a target="_blank" href="https://www.linkedin.com/company/lficl">
+      <img src="images/linkedin-purple.svg" alt="Linkedin">
+    </a>
+  </div>
 
   
   <section class="hero">
@@ -113,7 +111,7 @@
               </p>
             </div>
 
-            <a class="btn" href="#">
+            <a class="btn" href="#contacto">
               <div class="btn__content">
                 <p>Hablemos</p> 
                 <img src="images/arrow-purple.svg" alt="">
@@ -233,7 +231,7 @@
       <div class="wrap">
         <div class="sell-more__content">
           <h3>¿Quieres vender más?</h3>
-          <a class="btn btn--purple" href="#">
+          <a class="btn btn--purple" href="#contacto">
             <div class="btn__content">
               <p>Escríbenos</p>
               <img src="images/arrow-white.svg" alt="">
@@ -260,7 +258,7 @@
             </div>
             <div class="item">
               <div class="clients__item">
-                <img src="images/b-estado.png" alt="Cliente Banco estado">
+                <img class="filter" src="images/b-estado.png" alt="Cliente Banco estado">
         
               </div>
             </div>
@@ -284,7 +282,7 @@
             </div>
             <div class="item">
               <div class="clients__item">
-                <img src="images/b-estado.png" alt="Cliente Banco estado">
+                <img class="filter" src="images/b-estado.png" alt="Cliente Banco estado">
         
               </div>
             </div>
@@ -474,44 +472,37 @@
   </main>
 
   <footer class="footer">
-    <!-- <div class="wrap wrap--footer"> -->
       <div class="row footer--align">
         <div class="col-lg-7 mb-5 mb-lg-0">
           <div class="form" id="contacto">
-            <h3 class="title-2 title--footer">
+            <h3 class="title-2 title-2--footer">
               ¿QUIERES que te <br>
               ayudemos a vender más?
             </h3>
             <div class="form__wrap-inputs">
-              <form action="">
-                <label for="name">
-                  <input class="form__inputs" type="text" id="name" placeholder="Nombre">
-                </label>
-                <label for="company">
-                  <input class="form__inputs" type="text" id="company" placeholder="Empresa">
-                </label>
-                <label for="email">
-                  <input class="form__inputs" type="email" id="email" placeholder="Email">
-                </label>
-                <label for="phone">
-                  <input class="form__inputs" type="text" id="phone" placeholder="Celular">
-                </label>
-                <label for="message">
-                  <textarea class="form__inputs form__inputs--txt" id="message" placeholder="Mensaje"></textarea>
-                </label>
-                
-                <button type="submit" class="btn form__btn">
-                  Enviar
-                  <img src="images/arrow-purple.svg" alt="enviar">
-                </button>
-              </form>
+
+              <!-- SharpSpring Form for Ayuda ventas  -->
+                <!-- SharpSpring Form for Ayuda ventas  -->
+                <script type="text/javascript">
+                  var ss_form = { 'account': 'MzawMDGzMDMzBwA', 'formID': 'M0lNtExNNE7TTUtOttQ1MTCy0LU0TDbRNUhMNE-1NDI1tUxKBgA' };
+                  ss_form.width = '100%';
+                  ss_form.height = '1000';
+                  ss_form.domain = 'app-3QNEZVUMOI.marketingautomation.services';
+                  ss_form.hidden = { '_usePlaceholders': true }; // Modify this for sending hidden variables, or overriding values
+                    // ss_form.target_id = 'target'; // Optional parameter: forms will be placed inside the element with the specified id
+                    // ss_form.polling = true; // Optional parameter: set to true ONLY if your page loads dynamically and the id needs to be polled continually.
+                </script>
+                <script type="text/javascript"
+                  src="https://koi-3QNEZVUMOI.marketingautomation.services/client/form.js?ver=2.0.1"></script>
             </div>
           </div>
+
+          
 
         </div>
         <div class="col-lg-5 pl-lg-7">
           <div class="footer__lfi-medios">
-            <img class="wow zoomIn" data-wow-delay=".8s" data-wow-duration="1s" src="images/logo-medios.svg" alt="Logo LFI medios">
+            <img class="wow zoomIn" data-wow-delay=".6s" data-wow-duration="1s" src="images/logo-medios.svg" alt="Logo LFI medios">
             <p>LFI Medios es otro proyecto de LFI</p>
           </div>
           <div class="row">
@@ -533,13 +524,17 @@
               <div class="col-12 col-sm-6 col-lg-12">
                 <div class="footer__lfi-contact">
                   <div class="footer__icon">
-                    <img src="images/email.png" alt="dirección">
+                    <a href="mailto:contacto@lfimedios.com">
+                      <img src="images/email.png" alt="contacto@lfimedios.cl">
+                    </a>
                   </div>
                   <div class="footer__txt-icon">
                     <h5>.Email</h5>
-                    <p>
-                    contacto@lfimedios.com
-                    </p>
+                    <a href="mailto:contacto@lfimedios.com">
+                      <p>
+                      contacto@lfimedios.com
+                      </p>
+                    </a>
                   </div>
                 </div>
 
@@ -549,52 +544,38 @@
             <div class="footer__rrss-img--1">
               <img src="images/rrss.png" alt="rrss">
             </div>
+            
+            
             <div class="footer__rrss-img">
-              <a href="#">
-                <img src="images/rrss-1.svg" alt="Facebook">
-              </a>
-            </div>
-            <div class="footer__rrss-img">
-              <a href="#">
-                <img src="images/rrss-2.svg" alt="Twitter">
-              </a>
-            </div>
-            <div class="footer__rrss-img">
-              <a href="#">
+              <a target="_blank" href="https://www.linkedin.com/company/lficl">
                 <img src="images/rrss-3.svg" alt="Linkedin">
               </a>
             </div>
-            <div class="footer__rrss-img">
-              <a href="#">
-                <img src="images/rrss-4.svg" alt="Get On Board">
-              </a>
-            </div>
+            
           </div>
           <div class="footer__plataformas">
             <p>Conoce nuestras plataformas</p>
           </div>
           <div class="footer__wrap-logos">
             <div class="footer__logo footer__logo--1">
-              <a href="#">
-                <img class="footer--lfi-logo wow zoomIn" data-wow-delay="1s" data-wow-duration="1s" src="images/logo.svg" alt="Logo LFI">
+              <a href="https://lafabricaimaginaria.com/">
+                <img class="footer--lfi-logo wow zoomIn" data-wow-delay=".8" data-wow-duration="1s" src="images/logo.svg" alt="Logo LFI">
               </a>
             </div>
             <div class="footer__logo footer__logo--2">
-              <a href="#">
-                <img class="wow zoomIn" data-wow-delay="1s" data-wow-duration="1s" src="images/lfi-la.png" alt="LFI Latinoamerica">
+              <a href="https://lafabricaimaginaria.com/">
+                <img class="wow zoomIn" data-wow-delay=".8s" data-wow-duration="1s" src="images/lfi-la.png" alt="LFI Latinoamerica">
               </a>
             </div>
             <div class="footer__logo footer__logo--3">
-              <a href="#">
-                <img class="footer--sitefinity wow zoomIn" data-wow-delay="1s" data-wow-duration="1s" src="images/logo-sitefinity.svg" alt=" Sitefinity by LFI">
+              <a href="https://lafabricaimaginaria.com/">
+                <img class="footer--sitefinity wow zoomIn" data-wow-delay=".8s" data-wow-duration="1s" src="images/logo-sitefinity.svg" alt=" Sitefinity by LFI">
               </a>
             </div>
           </div>
           
         </div>
       </div>
-
-    <!-- </div> -->
 
   </footer>
 
@@ -604,6 +585,5 @@
   <script src="js/wow.js" defer></script>
   <script src="js/widget.js" defer></script>
   <script src="js/index.js" defer></script>
-  <script src="js/show.js" defer></script>
 </body>
 </html>

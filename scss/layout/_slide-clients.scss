@@ -13,6 +13,10 @@
   }
   .filter {
     filter: grayscale(100%);
+    transition: all .3s ease-in;
+  }
+  .filter:hover {
+    filter: grayscale(0);
   }
 }
 

@@ -162,7 +162,10 @@
         height: 25px;
         width: 20px;
         left: 0;
-        top: 5px;
+        top: 6.5px;
+        @include view-custom (1450px, 900px) {
+          top: 7.5px;
+        }
       }
     }
   }

@@ -32,17 +32,6 @@
       @include view-max(576px) {
         font-size: 3.5rem;
       }
-      // &::before {
-      //   content: attr(data-text);
-      //   position: absolute;
-      //   height: 100%;
-      //   color: #fff;
-      //   top: 0;
-      //   left: 0;
-      //   right: 0;
-      //   width: 100%;
-      //   -webkit-text-stroke: 0px $color-primary;
-      // }
       span {
         -webkit-text-stroke: 2px $bg-btn;
         color: transparent;
@@ -78,6 +67,12 @@
     @include view-min(992px) {
       bottom: 25px;
     }
+    @include view-min(1300px) {
+      bottom: 35px;
+    }
+    @include view-custom(1900px, 900px) {
+      bottom: 70px;
+    }
     img {
       width: 92%;
       @include view-min(500px) {
@@ -92,11 +87,14 @@
       @include view-min(1250px) {
         width: 94%;
       }
-      @include view-height(880px) {
-        width: 790px;
+      @include view-min(1450px) {
+        width: 96%;
       }
-      @include view-height(990px) {
-        width: 600px;
+      @include view-custom(1450px, 900px) {
+        width: 700px;
+      }
+      @include view-custom(1900px, 900px) {
+        width: 870px;
       }
     }
   }

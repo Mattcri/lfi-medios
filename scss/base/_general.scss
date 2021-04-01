@@ -12,6 +12,7 @@ body {
   max-width: 100%;
   font-family: $font-r;
   font-size: 1.8rem;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   @include view-min(992px) {
     font-size: 2rem;
@@ -63,9 +64,10 @@ figure {
   @include view-min(1250px) {
     max-width: 1350px;
   }
-  // @include view-min(1350px) {
-  //   padding: 0 35px;
-  // }
+  @include view-min(1550px) {
+    padding: 0 55px;
+    max-width: 1800px;
+  }
 }
 
 .wrap-carrusel {
@@ -86,7 +88,6 @@ a {
 
 .title-1 {
   color: $color-font-dark;
-  // color: transparent;
   font-family: $font-b;
   font-size: 2.5rem;
   margin-top: 0;
@@ -94,7 +95,6 @@ a {
   letter-spacing: 6px;
   line-height: 1.5;
   position: relative;
-  // opacity: 0;
   @include view-min(576px) {
     margin-top: 2rem;
   }
@@ -140,6 +140,7 @@ a {
   }
   &--footer {
     color: $color-fonts;
+    font-family: $font-b;
   }
 }
 

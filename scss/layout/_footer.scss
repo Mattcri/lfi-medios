@@ -2,6 +2,20 @@
   background-color: $color-primary;
   padding: 3.5rem 2rem;
   color: #fff;
+  &--wrap-success {
+    align-items: center;
+    background-color: $color-primary;
+    min-height: 100vh;
+    padding: 0;
+    img {
+      max-width: 100%;
+    }
+    .txt-success {
+      color: #0C284C;
+      font-size: 2.2rem;
+      margin: 0;
+    }
+  }
   &--align {
     align-items: center;
   }
@@ -21,6 +35,13 @@
     align-items: center;
     display: flex;
     margin: 0 0 2.1rem;
+    & a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   &__icon {
     margin: 0 1.7rem 0 0;
@@ -89,7 +110,6 @@
     }
   }
   &__logo {
-    // margin-right: 25px;
     &--1 {
       margin-right: 30px;
     }
@@ -107,16 +127,7 @@
   &--lfi-logo {
     width: 110px;
   }
-  // &--sitefinity {
-  //   transform: translate(0, 20px);
-  //   @include view-min(678px) {
-  //     transform: translate(-35px, 20px);
-  //   }
-  //   @include view-min(992px) {
-  //     transform: translate(-35px, 15px);
-
-  //   }
-  // }
+  
 
 }
 
@@ -136,8 +147,15 @@
       max-width: 75%;
     }
   }
-  &__inputs {
-    width: 100%;
+  &__wrap-form-success {
+    max-width: 95%;
+    margin: 0 auto;
+    @include view-min(576px) {
+      max-width: 85%;
+    }
+  }
+  & input {
+    width: 100% !important;
     height: 4rem;
     border: none;
     border-bottom: 2px solid #501778;
@@ -172,4 +190,25 @@
     }
   }
 
+}
+
+.animateEntry {
+  animation: showElement 1.8s ease;
+}
+
+@keyframes showElement {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    opacity: .6;
+    transform: scale(1);
+    letter-spacing: 1px;
+  }
+  75%, 100% {
+    opacity: 1;
+    letter-spacing: 0;
+   
+  }
 }
