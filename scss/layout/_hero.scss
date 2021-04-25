@@ -75,6 +75,7 @@
     }
     img {
       width: 92%;
+      object-fit: contain;
       @include view-min(500px) {
         width: 80%;
       }

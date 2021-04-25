@@ -14,20 +14,24 @@ mobileMenu.addEventListener('click', () => {
 });
 
 
-// window.addEventListener('scroll', () => {
-//   let scrolled = window.scrollY;
+$(document).ready(function () {
 
-//   switch (true) {
-//     case scrolled >= 1200:
-//       aboutTitle.classList.remove('fixed');
-//       break;
-//     case scrolled >= 900:
-//       aboutTitle.classList.add('fixed');
-//       break;
-    
-//     default:
-//       aboutTitle.classList.remove('fixed');
-//   }
-  
-// })
+  var lastScrollTop = 0;
+  $(window).scroll(function (event) {
+    var st = $(this).scrollTop();
+    if ($(window).scrollTop() > 50) {
+      if (st > lastScrollTop) {
+        $('header').addClass('oculto');
+      } else {
+        $('header').removeClass('oculto');
+      }
+    }
+    if ($(window).scrollTop() > 100) {
+      $('header').addClass('solido');
+    } else {
+      $('header').removeClass('solido');
+    }
+    lastScrollTop = st;
+  });
+});
 
